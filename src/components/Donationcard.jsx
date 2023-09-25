@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 const Donationcard = ({data}) => {
     const {id,img,title,tag,textColor,bgColor,bgBtn} = data
   return (
-    <Link to={`/donate/${id}`}>
-        <div className="card bg-base-100 shadow-xl">
+    <Link to={`/donate/${id}`} className="card bg-base-100 shadow-xl">
       <figure>
         <img
           src={img} className='w-full'
@@ -16,7 +15,6 @@ const Donationcard = ({data}) => {
         </div>
         <h2 style={{color: textColor}} className="text-xl font-semibold">{title}</h2>
       </div>
-    </div>
     </Link>
   );
 };
