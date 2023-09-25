@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 const Donationcard = ({data}) => {
     const {id,img,title,tag,textColor,bgColor,bgBtn} = data
-    console.log(id)
   return (
     <Link to={`/donate/${id}`}>
         <div className="card bg-base-100 shadow-xl">
