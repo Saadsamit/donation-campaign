@@ -20,7 +20,7 @@ const Donation = () => {
     </div>
     {
         filterid.length > 4 ? (<div className="flex justify-center">
-        <button onClick={()=>setToggle(!toggle)} className="py-3 px-5 rounded-lg mb-10 bg-[#009444] text-white">{toggle ? "See Less" : "See All"}</button>
+        <button onClick={()=>setToggle(!toggle)} className="mt-5 py-3 px-5 rounded-lg mb-10 bg-[#009444] text-white">{toggle ? "See Less" : "See All"}</button>
       </div>) : ""
     }
     </div>
