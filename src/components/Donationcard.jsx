@@ -11,7 +11,7 @@ const Donationcard = ({data}) => {
       </figure>
       <div style={{backgroundColor: bgColor}} className="card-body p-4 rounded-b-2xl">
         <div>
-        <p style={{color: textColor, backgroundColor: bgBtn}} className="grow-0 inline-block py-1 px-2 rounded-md text-sm font-medium">{tag}</p>
+        <p style={{color: textColor, backgroundColor: bgBtn}} className="grow-0 inline-block py-1 px-2 rounded-md text-sm font-medium capitalize">{tag}</p>
         </div>
         <h2 style={{color: textColor}} className="text-xl font-semibold">{title}</h2>
       </div>
