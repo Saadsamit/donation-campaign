@@ -31,15 +31,17 @@ const renderCustomizedLabel = ({
 };
 
 const RechartsPi = () => {
-    const LsData = JSON.parse(localStorage.getItem("ids"));
     const myData = useOutletContext();
+    const LsData = JSON.parse(localStorage.getItem("ids"));
     const filterid = myData.filter((data) => LsData?.includes(data.id));
-    const totalDonateArr = myData.reduce((pre,cur)=> pre + cur.donate, 0)
-    const LstotalDonateArr = filterid.reduce((pre,cur)=> pre + cur.donate, 0)
+    const totalDonateArr = myData.length
+    const LstotalDonateArr = filterid.length
+    const totalDonation = totalDonateArr - LstotalDonateArr
     const data = [
-  { value: totalDonateArr },
-  { value: LstotalDonateArr }
+  { name: "Total Donation",value: totalDonation },
+  { name: "Your Donation",value: LstotalDonateArr }
     ];
+    console.log(data);
     return (
         <PieChart width={400} height={400}>
           <Pie
