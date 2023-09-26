@@ -8,7 +8,7 @@ const Donation = () => {
   const filterid = myData.filter((data) => LsData?.includes(data.id));
   return (
     <div className="pt-28 pb-10 container mx-auto">
-        <p className="text-[#0B0B0B] text-2xl font-semibold capitalize">{filterid.length === 0 ? "no data here" : ""}</p>
+        <p className="text-[#0B0B0B] text-2xl font-semibold capitalize text-center">{filterid.length === 0 ? "no data here" : ""}</p>
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-4">
       {toggle ? (
         filterid?.map((data, idx) => (

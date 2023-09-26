@@ -4,11 +4,13 @@ import Home from "../pages/Home";
 import Donation from "../pages/Donation";
 import Statistics from "../pages/Statistics";
 import DonationcardDetails from "../pages/DonationcardDetails";
+import PageError from "../pages/PageError";
 const router = createBrowserRouter([
     {
       path: "/",
       element: <App></App>,
       loader: ()=> fetch('/Donations.json'),
+      errorElement: <PageError></PageError>,
       children: [
         {
             path: "/",
